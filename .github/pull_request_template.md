@@ -5,8 +5,8 @@
 ## How?
 
 ## Screenshots (optional)
-| Before | After |
+<!--| Before | After |
 | ----- | ------ |
-|  old screen  | new screen |
+|  old screen  | new screen |-->
 
 ## Anything Else?
