@@ -1,0 +1,13 @@
+	body{
+		background-color:darkblue;
+	}
+	h1{
+		font-style:italic;
+		color:white;
+		font-size:55px;
+		font-family:Verdana;
+		margin-top:25px;
+		margin-bottom:20px;
+		margin-left:10px;
+		vertical-align: middle;
+	}
