@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Multiplication Table</title>
+	<link rel="stylesheet" href="Css/multiplicationTable.css">
+</head>
+<body>
+	<section id="principal"> 
+		<header>
+			<nav>
+				<ul>
+					<li><h1>Multiplication Table</h1></li>
+					<div class="links">
+						<li><a href="">About</a></li>
+						<li><a href="https://github.com/DrigoP13">Other Projects</a></li>
+					</div>
+				</ul>	
+			</nav>
+		</header>
+		<div class="container">
+			<div class=form>
+				<form>
+					<input id="number" type="number" min=0 placeholder="Type a number"><!--translate here-->
+					<button id="generateTable">Generate Table</button><!--translate here-->
+					<a href="#tips"><img onclick="showButtons()" title="Multiplication Tips"src="Css/lamp.svg"></a>
+				</form>
+			</div>
+			<div class="status"></div> 	
+			<table>
+				<thead>
+					<tr> 	
+						<th></th>
+						<th></th>
+						<th></th>			
+					</tr> 
+				</thead>	
+				<tbody>	</tbody>
+			</table>
+			<section id="tips">
+				<div class="buttons"> 
+					<h2>Multiplication Tips:</h2>
+					<ul>
+						<li onclick="showTip0()"><button>Numbers ending in 0</button></li>
+						<li onclick="showTip5()"><button>Multiplying by 5</button></li>
+						<li onclick="showTip9()"><button>Multiplying by 9</button></li>
+						<li onclick="showTip11()"><button>Multiplying by 11</button></li>
+						<li onclick="showTip101()"><button>Multiplying by 101</button></li>
+						<li onclick="showGeneralTip()"><button>General tip</button></li>
+					</ul>
+				</div>
+					<div id="textBox">
+						<div>
+							<article>
+								<div id="tip0">
+									<p><b>NUMBERS ENDING IN 0</b></p><BR>
+									<p>In order to multiply by a number ending in zero, we first need to multiply the number as if it didn’t have 
+									zeros, and after, we just add all of the zeros the number had to the final answer.</p><p></p><b>Look:</b></p><br>
+									<p> 23 x 10 = (23 x 1) = 23 → Add the the amount of zeros at the end: 23 → 230 </p> 
+									<p> 35 x 300 = (35 x 3) = 105 → Add the the amount of zeros at the end: 105 → 10500 </p> 
+									<p> 12 x 2000 = (12 x 2) = 24 → Add the the amount of zeros at the end: 24 → 24000</p>
+								</div>
+							</article>
+							<article>
+								<div id="tip5">
+									<p><b>MULTIPLYING BY 5</b></p><BR>
+									<p>Multiplying a number by 5 means to multiply it by 10 and then divide it by 2 (since 5 = 10/2). Therefore,
+									we are gonna use the last tip, adding a 0 to the number and getting the half of it.</p><p><b>Look:</b></p><br>	
+									 <p>17 x 5 = (17 x 10) = 170 → Divide the result by 2: 170/2 = 85</p>
+									 <p>35 x 5 = (35 x 10) = 350 → Divide the result by 2: 350/2 = 175</p>
+									 <p>94 x 5 = (94 x 10) = 940 → Divide the result by 2: 940/2 = 470</p>
+								</div>
+							</article>	
+							<article>
+								<div id="tip9">
+									<p><b>MULTIPLYING BY 9</b></p><BR>
+									<p>From the same line of reasoning of the last tip, we can consider 9 as (10 - 1). This will lead us to conclude
+									that multiplying a number by 9 is the same that adding a 0 on it and subtract the inicial number from it.</p><p><b>Look:</b></p><br>
+									<p>85 x 9 = (85 x 10) = 850 → Subtract 85 from the result: 850 - 85 = 765</p>
+									<p>154 x 9 = (154 x 10) = 1540 → Subtract 154 from the result: 1540 - 154 = 1386</p>
+									<p>52 x 9 = (52 x 10) = 520 → Subtract 52 from the result: 520 - 52 = 468</p>
+								</div>
+							</article>
+							<article>
+								<div id="tip11">
+									<p><b>MULTIPLYING BY 11</b></p><BR>
+									<p><b>(This tip can only be applied when the number we will multiply has 2 digits)</b> Whenever you need to multiply 
+									a number by 11, simply add its digits and place the result between them.</p><p><b>Look:</b></p><br>
+									<p>26 x 11 = (2 + 6) = <b>8</b> → Put the 8 between the 2 digits: 2 <b>8</b> 8 = 288</p>
+									<p>43 x 11 = (4 + 3) = <b>7</b> → Put the 7 between the 2 digits: 4 <b>7</b> 3 = 473</p>
+									<p>90 x 11 = (9 + 0) = <b>9</b> → Put the 9 between the 2 digits: 9 <b>9</b> 0 = 990</p>
+								</div>
+							</article>
+							<article>
+								<div id="tip101">
+									<p><b>MULTIPLYING BY 101</b></p><BR>
+									<p>An interesting pattern can be noticed when multiplying a two digit number by 101. You just need
+									to write down the number twice.</p><p><b>Look:</b></p><br>
+									<p>99 x 101 = → Just write the number again: 9999</p>
+									<p>26 x 101 = → Just write the number again: 2626</p>
+									<p>78 x 101 = → Just write the number again: 7878</p>
+								</div>
+							</article>
+							<article>
+								<div id="generalTip">
+									<p><b>GENERAL TIP</b></p><BR>
+									<p>If none of these tricks can be used in your multiplication, you can still make use of the
+									decomposition technique. Decompose one of the numbers by writing it as an addition of its different parts, 
+									and then multiply the other number by these parts.</p><p><b>Look:</b></p><br>
+									<p> 45 x 87 = 45 * (80 + 7) → Multiply separadly and add the results: 3600 + 315 = 3915</p>
+									<p> 72 x 14 = 72 * (10 + 4) → (72 * 10) + (72 * 4) = 720 + 288 = 1008</p>
+									<p> 23 x 132 = 23 * (100 + 30 + 2) → (23 * 100) + (23 * 30) + (23 * 2) = 2300 + 690 + 46 = 3036</p>	
+								</div>
+							</article>
+						</div>							
+					</div>
+				</article>
+			</section>
+		</div>
+	</section>
+	<footer>
+		<div class="details">
+			<h3>Created By:</h3>
+			<p>Rodrigo Polastro da Silva</p>
+			<p>ETEC Euro Albino de Souza<p>
+			<p>1º Análise e Desenvolvimento de Sistemas 2021</p>
+		</div>
+	</footer>
+		<script src = "Js/multiplicationTable.js"> </script>
+</body>
+
+	
